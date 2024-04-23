@@ -85,13 +85,13 @@
 |H/W|<img src="https://img.shields.io/badge/Raspbian GNU/Linux 11-A22846.svg?style=flat-square&logo=raspberrypi&logoColor=white"/> <img src="https://img.shields.io/badge/Firebase-FFCA28.svg?style=flat-square&logo=firebase&logoColor=white"/> <img src="https://img.shields.io/badge/C-A8B9CC.svg?style=flat-square&logo=c&logoColor=black"/> <img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=python&logoColor=white"/>|
 |협업|<img src="https://img.shields.io/badge/KakaoTalk-FFCD00.svg?style=flat-square&logo=kakaotalk&logoColor=black"/> <img src="https://img.shields.io/badge/Google Docs-4285F4.svg?style=flat-square&logo=googledocs&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717.svg?style=flat-square&logo=github&logoColor=white"/>|
 
-#### 라즈베리파이
+### 라즈베리파이
 - `pi카메라`를 이용하여 영상 송출
 - `서보모터`를 이용하여 사료 급여
 - `스피커`를 이용하여 음성 재생
 - `온습도센서`를 이용하여 온습도 표시
 
-#### firebase
+### firebase
 - `feed`키를 통해 사료 관련 데이터 송수신
 - `voice`키와 `recorded.wav`파일을 통해 음성 데이터 송수신
 - `humidity`, `temperature`키를 통해 온습도 관련 데이터 송수신
@@ -109,7 +109,158 @@
 <br>
 
 ## 시스템 기능
-- 자동 급식기
-- 안심 카메라
-- 안심 스피커
-- 온습도 측정
+### 자동 급식기
+- 모터를 통해 자동으로 사료를 공급하는 하드웨어
+<img src="https://github.com/irrso/MP_project_sy/assets/105829324/94c60ecd-5b54-47c2-a816-765e1017b092">
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Java
+        //feed 초기값
+        dbReference = FirebaseDatabase.getInstance().getReference();
+        dbReference.child("feed").setValue(0);
+
+        //사료주기
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                progress = i * 0.5;
+                se.setText(progress + "초");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        feedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //dbReference = FirebaseDatabase.getInstance().getReference();
+
+                //dbReference.child("feed").setValue(true);
+                dbReference.child("feed").setValue(progress);
+                Handler mHandler = new Handler();
+                Toast.makeText(getApplicationContext(), "사료주기 완료", Toast.LENGTH_SHORT).show();
+
+                /*mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dbReference.child("feed").setValue(false);
+                        Toast t = Toast.makeText(getApplicationContext(), "사료주기 완료", Toast.LENGTH_SHORT);
+                        t.show();
+                    }
+                },3000);*/
+            }
+        });
+  ```
+</details>
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Python
+
+
+  ```
+</details>
+
+### 안심 카메라
+- 혼자 있는 반려동물을 촬영하는 카메라
+<img src="https://github.com/irrso/MP_project_sy/assets/105829324/55318799-9057-4cb4-aa7d-0526db9f2f9d">
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Java
+         //영상보기
+        videoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
+                startActivity(intent);
+            }
+        });
+  ```
+</details>
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Python
+
+
+  ```
+</details>
+
+### 안심 스피커
+- 앱을 통해 전달된 음성 녹음을 반려동물에게 들려주는 스피커
+<img src="https://github.com/irrso/MP_project_sy/assets/105829324/3201ea8a-a5ff-4ebf-9207-bcb3f5e703bd">
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Java
+        //녹음하기
+        voiceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), VoiceActivity.class);
+                startActivity(intent);
+            }
+        });
+  ```
+</details>
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Python
+
+
+  ```
+</details>
+
+### 온습도 측정
+- 반려동물의 환경이 쾌적한 온습도인지 확인하는 시스템
+<img src="https://github.com/irrso/MP_project_sy/assets/105829324/c79d1d29-6b12-4f73-8666-e91173a327c0">
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Java
+        //온습도
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("temphumi");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Double value1 = snapshot.child("temperature").getValue(Double.class);
+                Double value2 = snapshot.child("humidity").getValue(Double.class);
+                te.setText(value1+"°C"); //"\'C"
+                hu.setText(value2+"%");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+  ```
+</details>
+
+<details>
+    <summary> 소스코드 </summary>
+
+  ```Python
+
+
+  ```
+</details>
