@@ -6,8 +6,8 @@
 </div>
 <br>
 
-<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4d1e6463-0ddd-4322-9885-3b3501c1e9ea%2F%25EC%25BB%25A4%25EB%25B2%2584.jpg?table=block&id=9c38281b-d776-4419-93a3-cb2e8670093a&spaceId=bbd4c5bb-0d54-4459-b0d9-4bdcefc6f6e3&width=1920&userId=531bb916-de27-453d-8381-82bd4a86f01a&cache=v2">
-<br>
+<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/7af1e863-98ca-49eb-a4d4-3a53ab0cba89">
+<br><br>
 
 ## 메인 아이디어
 - 집에 혼자 있는 반려동물을 어떻게 관리할 수 있을까 ❓
@@ -21,7 +21,7 @@
   여러 기능을 통합하여 간편하게 사용할 수 있어요! 👍 
 </h3>
 <div align="center">
-  <img src="https://brave-horse-48d.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe71b3849-27b1-423d-b6f0-e80371d0f8e8%2Fimage11.png?table=block&id=ccc5b218-db74-4371-9e34-b93c0942b02f&spaceId=bbd4c5bb-0d54-4459-b0d9-4bdcefc6f6e3&width=380&userId=&cache=v2" width="249" height="443"/>
+  <img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/830279f7-36f0-4b29-a0ff-29bfd952b2d5" width="249" height="443"/>
 </div>
 <hr>
     
@@ -43,7 +43,7 @@
 <div align="center">
   
    **원하는 양의 사료를 급여할 수 있어요 🤍** <br><br>
-  <img src="https://github.com/irrso/Mobile_project/assets/105829324/24ecada9-7af6-4ed1-8287-3262d7db50d8" width="249" height="443"/>
+  <img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/ae1c9419-3679-4ac7-bf85-fbded3d5575d" width="249" height="443"/>
   <br><br>
   바를 움직여서 원하는 사료 양을 조절해요.
 </div>
@@ -56,7 +56,7 @@
 <div align="center">
   
   **지금 무엇을 하고있는지 확인할 수 있어요 🤍** <br><br>
-  <img src="https://github.com/irrso/Mobile_project/assets/105829324/12cf01d6-878a-42c6-b38b-3c86b6df4822" width="249" height="443"/>
+  <img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/c613e320-c512-40c7-b5ea-40ab7e841721" width="249" height="443"/>
 </div>
 <hr>
 
@@ -67,7 +67,7 @@
 <div align="center">
   
   **마이크를 눌러 녹음하고 내용을 확인 후 전송할 수 있어요 🤍** <br><br>
-  <img src="https://github.com/irrso/Mobile_project/assets/105829324/3fca2055-9cb1-4abb-aea3-3e58a171ffbb" width="249" height="443"/>
+  <img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/cac637e5-8418-4687-9c10-7dabaf6524b8" width="249" height="443"/>
   <br><br>
   마이크를 눌러 녹음을 시작하고 다시 눌러 녹음을 종료해요.<br><br>
   재생 및 정지 버튼을 통해 녹음 내용을 확인해요.<br><br>
@@ -110,13 +110,13 @@
 
 |시스템 구상도|시스템 회로도|
 |:---:|:---:|
-|<img src="https://github.com/irrso/Mobile_project/assets/105829324/0198ef37-d9bd-457a-96d5-cbd92e2d47d5" width="110%" height="auto">|<img src="https://github.com/irrso/Mobile_project/assets/105829324/cac1aed3-de5f-4209-a72e-b3a6f99b7b2e" width="90%" height="auto">|
+|<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/da9fe625-0e86-44f8-921f-4677c05e7bb0" width="110%" height="auto">|<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/35fbeb12-c7a2-445e-906e-0ab6babcbbe3" width="90%" height="auto">|
 <br>
 
 ## 시스템 기능
 ### 자동 급식기
 - 모터를 통해 자동으로 사료를 공급하는 하드웨어
-<img src="https://github.com/irrso/MP_project_sy/assets/105829324/94c60ecd-5b54-47c2-a816-765e1017b092" width="25%" height="auto"/>
+<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/b0c532bc-ccbd-4e18-9b02-636d6e09e354" width="25%" height="auto"/>
 
 <details>
     <summary> <img src="https://img.shields.io/badge/MainActivity.Java-007396.svg?style=flat-square"/> </summary>
@@ -201,7 +201,7 @@ GPIO.cleanup()
 
 ### 안심 카메라
 - 혼자 있는 반려동물을 촬영하는 카메라
-<img src="https://github.com/irrso/MP_project_sy/assets/105829324/55318799-9057-4cb4-aa7d-0526db9f2f9d" width="25%" height="auto"/>
+<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/1b4a1cdd-0f4e-4112-a24d-94c921048e4e" width="25%" height="auto"/>
 
 <details>
     <summary> <img src="https://img.shields.io/badge/MainActivity.Java-007396.svg?style=flat-square"/> </summary>
@@ -341,7 +341,7 @@ with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
 
 ### 안심 스피커
 - 앱을 통해 전달된 음성 녹음을 반려동물에게 들려주는 스피커
-<img src="https://github.com/irrso/MP_project_sy/assets/105829324/3201ea8a-a5ff-4ebf-9207-bcb3f5e703bd" width="25%" height="auto"/>
+<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/c2eeb952-86e2-413c-9134-7ef5b4603876" width="25%" height="auto"/>
 
 <details>
     <summary> <img src="https://img.shields.io/badge/MainActivity.Java-007396.svg?style=flat-square"/> </summary>
@@ -407,7 +407,7 @@ while True:
 
 ### 안심 온습도
 - 반려동물의 환경이 쾌적한 온습도인지 확인하는 시스템
-<img src="https://github.com/irrso/MP_project_sy/assets/105829324/c79d1d29-6b12-4f73-8666-e91173a327c0" width="25%" height="auto"/>
+<img src="https://github.com/irrso/microprocessor-integrated-pet-management-system/assets/105829324/3472a320-cd57-4558-9b03-66730bbde50f" width="25%" height="auto"/>
 
 <details>
     <summary> <img src="https://img.shields.io/badge/MainActivity.Java-007396.svg?style=flat-square"/> </summary>
